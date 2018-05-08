@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "emiasPlus",
+  "version": "2.0",
+  "description": "Insert extended functions into analytic system",
+  "applications": {
+    "gecko": {
+      "id": "kontaktAK@Blaze.ru",
+      "strict_min_version": "42.0"
+    }
+  },
+  "icons": {
+    "48": "icons/emi-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/jquery-3.0.0.min.js",
+        "bootstrap/js/bootstrap.min.js",
+        "js/moment.js",
+        "js/daterangepicker.js",
+        "main.js"
+      ],
+      "css": [
+        "bootstrap/css/bootstrap.min.css",
+        "css/daterangepicker.css"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "*://*/*",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icons/emi-32.png",
+    "default_title": "Аналитика",
+    "default_popup": "popup/actions.html"
+  }
+}

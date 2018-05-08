@@ -1,0 +1,77 @@
+<style>
+    .fade {
+        opacity: 1 !important;
+    }
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .row .btn {
+        margin: 2px;
+    }
+    .modal-dialog {
+        top: 18%;
+    }
+    #reportModal .modal-dialog {
+        width: 100%;
+        max-width: none;
+    }
+    h4.hint {
+        color: #5bc0de;
+    }
+</style>
+<div id="launchModal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center">Аналитика</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <button class="btn btn-default btn-action" data-action="DangerZones"> Превышение сроков записи
+                        </button>
+                        <button class="btn btn-default btn-action" data-action="Repetitive"> Повторяющиеся пациенты
+                        </button>
+                        <button class="btn btn-default btn-action" data-action="RecordSources"> Проверка источников
+                            записи
+                        </button>
+                    </div>
+                </div>
+                <div class="container action-content ">
+                    <hr>
+                    <h4 class="text-center">Выбранные ресурсы: </h4>
+                    <hr>
+                    <div class="currentResources" class="row">
+
+                    </div>
+                    <div class="action-info" class="row">
+                    </div>
+                    <div id="settings" class="input-group mb-3"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="reportModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center">Отчет на 06.04.2018 </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <table id="reportContent" class="table table-bordered">
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
