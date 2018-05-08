@@ -191,6 +191,7 @@ function EmiasPlusError(message) {
 
 }
 
+
 EmiasPlusError.prototype = Object.create(Error.prototype);
 EmiasPlusError.prototype.constructor = EmiasPlusError;
 
