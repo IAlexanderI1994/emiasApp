@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "emiasPlus",
-  "version": "2.0",
+  "version": "19.0",
   "description": "Insert extended functions into analytic system",
   "applications": {
     "gecko": {
